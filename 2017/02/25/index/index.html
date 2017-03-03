@@ -87,22 +87,28 @@
 
 
 
-<meta name="description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
+<meta name="description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。
+记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
 所以，避免margin穿透啊，清除浮动什么的也好理解了。
-Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，">
+Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。
+它是页面中的一块渲染区">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BFC">
 <meta property="og:url" content="https://armyfront.github.io/2017/02/25/index/index.html">
 <meta property="og:site_name" content="小同学">
-<meta property="og:description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
+<meta property="og:description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。
+记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
 所以，避免margin穿透啊，清除浮动什么的也好理解了。
-Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，">
-<meta property="og:updated_time" content="2017-03-03T03:50:15.973Z">
+Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。
+它是页面中的一块渲染区">
+<meta property="og:updated_time" content="2017-03-03T03:54:43.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BFC">
-<meta name="twitter:description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
+<meta name="twitter:description" content="BFC元素简介与基本表现BFC全名“Block formatting context”就是“块级格式化上下文”。
+记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
 所以，避免margin穿透啊，清除浮动什么的也好理解了。
-Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，">
+Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。
+它是页面中的一块渲染区">
 
 
 
@@ -327,9 +333,11 @@ Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。�
       
 
       
-        <h3 id="BFC元素简介与基本表现"><a href="#BFC元素简介与基本表现" class="headerlink" title="BFC元素简介与基本表现"></a>BFC元素简介与基本表现</h3><pre><code>BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
+        <h3 id="BFC元素简介与基本表现"><a href="#BFC元素简介与基本表现" class="headerlink" title="BFC元素简介与基本表现"></a>BFC元素简介与基本表现</h3><pre><code>BFC全名“Block formatting context”就是“块级格式化上下文”。
+记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
 所以，避免margin穿透啊，清除浮动什么的也好理解了。
-</code></pre><h3 id="Formatting-context"><a href="#Formatting-context" class="headerlink" title="Formatting context"></a>Formatting context</h3><pre><code>Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+</code></pre><h3 id="Formatting-context"><a href="#Formatting-context" class="headerlink" title="Formatting context"></a>Formatting context</h3><pre><code>Formatting context 是 W3C CSS2.1 规范中的一个概念。
+它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
 最常见的 Formatting context 有 Block fomatting context (简称BFC)和 Inline formatting context (简称IFC)。
 </code></pre><p>　　<a id="more"></a><br>    CSS2.1 中只有 BFC 和 IFC, CSS3 中还增加了 GFC 和 FFC。</p>
 <h3 id="BFC布局规则："><a href="#BFC布局规则：" class="headerlink" title="BFC布局规则："></a>BFC布局规则：</h3><pre><code>1:内部的Box会在垂直方向，一个接一个地放置。
@@ -343,9 +351,15 @@ Formatting contextFormatting context 是 W3C CSS2.1 规范中的一个概念。�
 1.2：overflow的值为auto,scroll或hidden。
 1.3：display的值为table-cell, table-caption, inline-block中的任何一个。
 1.4：position的值不为relative和static。
-</code></pre><h3 id="BFC出现的详细情况"><a href="#BFC出现的详细情况" class="headerlink" title="BFC出现的详细情况"></a>BFC出现的详细情况</h3><pre><code>1、在创建了 BFC的元素中，其子元素按文档流一个接一个地放置。垂直方向上他们的起点是一个包含块的顶部，两个相邻的元素之间的垂直距离取决于 ‘margin’ 特性。 两个相邻的普通流中的块框在垂直位置的空白边会发生折叠现象。也就是处于同一个BFC中的两个垂直窗口的margin会重叠。生成BFC的元素不会和在流中的子元素发生空白边折叠。所以解决这种问题的办法是要为两个容器添加具有BFC的包裹容器。
-2、在BFC中，每一个元素左外边与包含块的左边相接触（对于从右到左的格式化，右外边接触右边）， 即使存在浮动也是如此（尽管一个元素的内容区域会由于浮动而压缩），除非这个元素也创建了一个新的BFC 。
-3、BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会在布局上影响到外面的元素，反之也是如此。　因为BFC内部的元素和外部的元素绝对不会互相影响，因此， 当BFC外部存在浮动时，它不应该影响BFC内部Box的布局，BFC会通过变窄，而不与浮动有重叠。
+</code></pre><h3 id="BFC出现的详细情况"><a href="#BFC出现的详细情况" class="headerlink" title="BFC出现的详细情况"></a>BFC出现的详细情况</h3><pre><code>1、在创建了 BFC的元素中，其子元素按文档流一个接一个地放置。
+垂直方向上他们的起点是一个包含块的顶部，两个相邻的元素之间的垂直距离取决于 ‘margin’ 特性。
+ 两个相邻的普通流中的块框在垂直位置的空白边会发生折叠现象。也就是处于同一个BFC中的两个垂直窗口的margin会重叠。
+生成BFC的元素不会和在流中的子元素发生空白边折叠。所以解决这种问题的办法是要为两个容器添加具有BFC的包裹容器。
+2、在BFC中，每一个元素左外边与包含块的左边相接触（对于从右到左的格式化，右外边接触右边）， 
+即使存在浮动也是如此（尽管一个元素的内容区域会由于浮动而压缩），除非这个元素也创建了一个新的BFC 。
+3、BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会在布局上影响到外面的元素，反之也是如此。
+因为BFC内部的元素和外部的元素绝对不会互相影响，因此， 当BFC外部存在浮动时，它不应该影响BFC内部Box的布局，
+BFC会通过变窄，而不与浮动有重叠。
 同样的，当BFC内部有浮动时，为了不影响外部元素的布局，BFC计算高度时会包括浮动的高度。避免margin重叠也是这样的一个道理。
 </code></pre>
       
