@@ -270,7 +270,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/03/js简单的归纳/" itemprop="url">
-                  未命名
+                  js简单的归纳
                 </a>
               
             
@@ -323,8 +323,7 @@
 
       
         
-          
-            <h1 id="js简单的归纳"><a href="#js简单的归纳" class="headerlink" title="js简单的归纳"></a>js简单的归纳</h1><hr>
+          <h1 id="js简单的归纳"><a href="#js简单的归纳" class="headerlink" title="js简单的归纳"></a>js简单的归纳</h1><hr>
 <p>基本类型</p>
 <pre><code>number,string,boolean,null,undefined
 </code></pre><p>组合类型</p>
@@ -344,38 +343,14 @@
 　　　　实例方法
 　　　　静态方法
 　　　　私有方法
-
-- 运算符
-算术 逻辑 关系 位 语句
-
-　　循环分支语句
-</code></pre><p>JS中声明变量的几种方式</p>
-<pre><code>a,b参数变量 如function fn(a,b){}
-p,q是var定义的
-m:函数声明:FD
-</code></pre><p>他们的区别</p>
-<pre><code>他们都会变量上浮。(variable hoist);
-除了函数声明外,其他类型的变量,只是定义上浮了。
-</code></pre><p>执行上下文</p>
-<pre><code>ec(执行上下文):
-   可以看做一个对象{}的格式(调试里面的scope),里面存储着函数里面定义的所有变量)
-</code></pre><p>垃圾回收器</p>
-<pre><code>gc:垃圾回收器
-    系统会隔一段时间,或者当内存占用过大的时候,去遍历一下所有的变量。
-</code></pre><p>变量清除的方式</p>
-<pre><code>如果发现,没有其他变量引用它,就把他清空,释放内存。
-(有两种方案决定变量的回收:一种是: 引用计数,一种是: 函数内部的函数或变量被依赖)
-</code></pre><p>闭包:</p>
-<pre><code>自由变量:
-    函数里面引用的外面定义的变量,叫自由变量。
-
-闭包的表面理解:
-    当一个函数执行,返回一个函数,这个函数还可以引用这个函数内部的变量。这种情形叫闭包。
-
-深层理解:
-    当函数执行完毕,他的ec被推出调用堆栈。如果有其他变量引用它,他不会被gc回收。所以这造就了闭包。
-</code></pre>
-          
+</code></pre><p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/03/js简单的归纳/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -490,8 +465,11 @@ m:函数声明:FD
 
       
         
-          <h1 id="BFC元素简介与基本表现"><a href="#BFC元素简介与基本表现" class="headerlink" title="BFC元素简介与基本表现"></a>BFC元素简介与基本表现</h1><p> BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。<br>所以，避免margin穿透啊，清除浮动什么的也好理解了。</p>
-<h1 id="Formatting-context"><a href="#Formatting-context" class="headerlink" title="Formatting context"></a>Formatting context</h1><p>  Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。<br>  最常见的 Formatting context 有 Block fomatting context (简称BFC)和 Inline formatting context (简称IFC)。<br>
+          <h3 id="BFC元素简介与基本表现"><a href="#BFC元素简介与基本表现" class="headerlink" title="BFC元素简介与基本表现"></a>BFC元素简介与基本表现</h3><pre><code>BFC全名“Block formatting context”就是“块级格式化上下文”。记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么动都不会影响外部的元素。
+所以，避免margin穿透啊，清除浮动什么的也好理解了。
+</code></pre><h3 id="Formatting-context"><a href="#Formatting-context" class="headerlink" title="Formatting context"></a>Formatting context</h3><pre><code>Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+最常见的 Formatting context 有 Block fomatting context (简称BFC)和 Inline formatting context (简称IFC)。
+</code></pre><p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/02/25/index/#more" rel="contents">
