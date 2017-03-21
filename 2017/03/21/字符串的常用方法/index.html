@@ -1,0 +1,798 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="字符串的常用方法," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="字符串的常用方法document.write(“字符串slice()截取方法”);//字符串slice截取方法  MDN这样说  slice() 方法提取字符串中的一部分，并返回这个新的字符串。
+
+// 写法1
+var str = &amp;apos;The morning is upon us.&amp;apos;;
+str.slice(2, 5); // returns &amp;apos;e m&amp;apos; 表示从">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BFC">
+<meta property="og:url" content="https://armyfront.github.io/2017/03/21/字符串的常用方法/index.html">
+<meta property="og:site_name" content="小同学">
+<meta property="og:description" content="字符串的常用方法document.write(“字符串slice()截取方法”);//字符串slice截取方法  MDN这样说  slice() 方法提取字符串中的一部分，并返回这个新的字符串。
+
+// 写法1
+var str = &amp;apos;The morning is upon us.&amp;apos;;
+str.slice(2, 5); // returns &amp;apos;e m&amp;apos; 表示从">
+<meta property="og:updated_time" content="2017-03-21T11:11:14.355Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BFC">
+<meta name="twitter:description" content="字符串的常用方法document.write(“字符串slice()截取方法”);//字符串slice截取方法  MDN这样说  slice() 方法提取字符串中的一部分，并返回这个新的字符串。
+
+// 写法1
+var str = &amp;apos;The morning is upon us.&amp;apos;;
+str.slice(2, 5); // returns &amp;apos;e m&amp;apos; 表示从">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://armyfront.github.io/2017/03/21/字符串的常用方法/"/>
+
+
+
+
+
+  <title> BFC | 小同学 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小同学</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://armyfront.github.io/2017/03/21/字符串的常用方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armyfront">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小同学">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                BFC
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-21T18:43:53+08:00">
+                2017-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="字符串的常用方法"><a href="#字符串的常用方法" class="headerlink" title="字符串的常用方法"></a>字符串的常用方法</h2><h4 id="document-write-“字符串slice-截取方法”"><a href="#document-write-“字符串slice-截取方法”" class="headerlink" title="document.write(“字符串slice()截取方法”);"></a>document.write(“字符串slice()截取方法”);</h4><pre><code>//字符串slice截取方法  MDN这样说  slice() 方法提取字符串中的一部分，并返回这个新的字符串。
+
+// 写法1
+var str = &apos;The morning is upon us.&apos;;
+str.slice(2, 5); // returns &apos;e m&apos; 表示从索引第2个字符开始，截取到索引为5的字符包含2，不包含5;【2，5);
+// 写法2
+var str1 = &apos;The morning is upon us.&apos;;
+var str2 = str1.slice(4, -1); //【4,-1) 表示从索引第4个字符开始，截取到最后一个字符 包含4，不包含-1;
+console.log(str2); // morning is upon us
+
+// 写法3
+var str3 = &apos;The morning is upon us.&apos;;
+str3.slice(-3); // returns &apos;us.&apos;  表示字符串从右往左数第三个字符截取到最后
+str3.slice(-3, -1); // returns &apos;us&apos;   表示字符串从右往左数第三个字符截取到最后一个字符 【-3,-1);
+str3.slice(0, -1); // returns &apos;The morning is upon us&apos; 【0，-1) 废话不多说，你们应该懂得
+
+// 写法4
+var str4 = &apos;The morning is upon us.&apos;;
+str4.slice(5, 2); //returns 空字符串
+</code></pre><a id="more"></a>
+<h4 id="document-write-“字符串substr-方法”"><a href="#document-write-“字符串substr-方法”" class="headerlink" title="document.write(“字符串substr()方法”);"></a>document.write(“字符串substr()方法”);</h4><pre><code>// 字符串substr方法 MDN这样说  substr() 方法返回字符串中从指定位置开始到指定长度的子字符串
+// 语法str.substr(start[, length])
+// 参数start
+// 开始提取字符的位置。如果为负值，则被看作 strLength + start，其中 strLength 为字符串的长度（例如，如果 start 为 -3，则被看作 strLength-3）。
+// 参数length
+// 可选。提取的字符数。
+var sstr1 = &quot;abcdefghij&quot;;
+console.log(&quot;(1,2): &quot; + sstr1.substr(1, 2)); // (1,2): &quot;bc&quot;  表示从索引为1开始 截取2个字符
+console.log(&quot;(-3,2): &quot; + sstr1.substr(-3, 2)); // (-3,2): hi   表示从右往左数第三个开始截取 截取2个字符  （MDN说 如果 start 为 -3，则被看作 strLength-3）和我的解释是等价的 10-3=7 从索引为7的字符截取2个
+console.log(&quot;(-3): &quot; + sstr1.substr(-3)); // (-3): hij    表示从右往左数第三个开始截取 截取到最后
+console.log(&quot;(1): &quot; + sstr1.substr(1)); // (1): bcdefghij  表示从索引为1的数字开始 截取到最后
+console.log(&quot;(1): &quot; + sstr1.substr(-10, 2)); // (1): bcdefghij  表示从索引为1的数字开始 截取到最后
+console.log(&quot;(-20, 2): &quot; + sstr1.substr(-20, 2)); // (-20, 2): ab  如果 start 为负值且 abs(start) 大于字符串的长度，则 substr 使用 0 作为开始提取的索引。表示从索引为0的位置截取2个字符
+
+//注 字符串substr方法  str.substr(start[, length])  不支持负的 start 索引  有兼容问题 解决兼容问题见MDN
+</code></pre><h4 id="document-write-“字符串substring-方法”"><a href="#document-write-“字符串substring-方法”" class="headerlink" title="document.write(“字符串substring()方法”);"></a>document.write(“字符串substring()方法”);</h4><pre><code>//字符串substring()方法  返回字符串两个索引之间（或到字符串末尾）的子串。
+//语法 str.substring(indexStart[, indexEnd])
+//参数
+//indexStart
+//一个 0 到字符串长度之间的整数。
+//indexEnd
+//可选。一个 0 到字符串长度之间的整数。
+var anyString = &quot;Mozilla&quot;;
+
+// 输出 &quot;Moz&quot;
+console.log(anyString.substring(0, 3)); //表示从索引为0截取到索引到3的字符串 【0，3）包含索引0 不包含索引3；
+console.log(anyString.substring(3, 0)); // 如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。 所以输出结果同上；
+
+// 输出 &quot;lla&quot;
+console.log(anyString.substring(4, 7)); //如果任一参数大于 stringName.length，则被当作 stringName.length。表示从索引为4截取到最后啦。
+console.log(anyString.substring(7, 4)); // 如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。 所以输出结果同上；
+
+// 输出 &quot;Mozill&quot;
+console.log(anyString.substring(0, 6)); //【0，6）；
+
+// 输出 &quot;Mozilla&quot;
+console.log(anyString.substring(0, 7)); //【0，7）
+console.log(anyString.substring(0, 10)); //如果任一参数大于 stringName.length，则被当作 stringName.length。
+
+//注 如果 indexStart 等于 indexEnd，substring 返回一个空字符串。
+// 如果省略 indexEnd，substring 提取字符一直到字符串末尾。
+//  如果任一参数小于 0 或为 NaN，则被当作 0。
+//  如果任一参数大于 stringName.length，则被当作 stringName.length。
+</code></pre><h4 id="document-write-“字符串toUpperCase-方法”"><a href="#document-write-“字符串toUpperCase-方法”" class="headerlink" title="document.write(“字符串toUpperCase()方法”);"></a>document.write(“字符串toUpperCase()方法”);</h4><pre><code>// toUpperCase 将调用该方法的字符串值转换为大写形式，并返回。toUpperCase 方法不影响字符串本身的值。
+console.log(&quot;alphabet&quot;.toUpperCase()); // &quot;ALPHABET&quot;
+</code></pre><h4 id="document-write-“字符串toLowerCase-方法”"><a href="#document-write-“字符串toLowerCase-方法”" class="headerlink" title="document.write(“字符串toLowerCase()方法”);"></a>document.write(“字符串toLowerCase()方法”);</h4><pre><code>//toLowerCase() 将调用该方法的字符串值转为小写形式，并返回。
+console.log(&quot;ALPHABET&quot;.toLowerCase()); // &quot;alphabet&quot;
+</code></pre><h4 id="document-write-“字符串split-方法”"><a href="#document-write-“字符串split-方法”" class="headerlink" title="document.write(“字符串split()方法”);"></a>document.write(“字符串split()方法”);</h4><pre><code>//split() 方法通过把字符串分割成子字符串来把一个 String 对象分割成一个字符串数组。
+//语法str.split([separator][, limit])
+//separator  指定用来分割字符串的字符（串）。
+//limit
+//一个整数，限定返回的分割片段数量。split 方法仍然分割每一个匹配的 separator，但是返回的数组只会截取最多 limit 个元素。
+var myString = &quot;Hello World. How are you doing?&quot;;
+var splits = myString.split(&quot;&quot;); //如果 separator 是一个空字符串，则 str 将被转换为由字符串中字符组成的一个数组。
+console.log(splits); //返回结果[&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;, &quot; &quot;, &quot;W&quot;, &quot;o&quot;, &quot;r&quot;, &quot;l&quot;, &quot;d&quot;, &quot;.&quot;, &quot; &quot;, &quot;H&quot;, &quot;o&quot;, &quot;w&quot;, &quot; &quot;, &quot;a&quot;, &quot;r&quot;, &quot;e&quot;, &quot; &quot;, &quot;y&quot;, &quot;o&quot;, &quot;u&quot;, &quot; &quot;, &quot;d&quot;, &quot;o&quot;, &quot;i&quot;, &quot;n&quot;, &quot;g&quot;, &quot;?&quot;]  用心去体会
+console.log(myString.split()) // 如果忽略 separator，则返回整个字符串的数组形式。 [&quot;Hello World. How are you doing?&quot;]
+console.log(myString.split(&quot; &quot;)); // 当找到一个 seperator 时，separator 会从字符串中被移除，返回存进一个数组当中的子字符串。[&quot;Hello&quot;, &quot;World.&quot;, &quot;How&quot;, &quot;are&quot;, &quot;you&quot;, &quot;doing?&quot;] 说白了separator就是分割元素；
+</code></pre><h4 id="document-write-“字符串indexOf-方法”"><a href="#document-write-“字符串indexOf-方法”" class="headerlink" title="document.write(“字符串indexOf() 方法”);"></a>document.write(“字符串indexOf() 方法”);</h4><pre><code>//indexOf() 方法返回指定值在字符串对象中首次出现的位置。从 fromIndex 位置开始查找，如果不存在，则返回 -1。
+//语法 str.indexOf(searchValue[, fromIndex])
+//参数
+
+//searchValue
+//一个字符串表示被查找的值。
+//fromIndex 可选
+//表示调用该方法的字符串中开始查找的位置。可以是任意整数。默认值为 0。如果 fromIndex &lt; 0 则查找整个字符串（如同传进了 0）。如果 fromIndex &gt;= str.length，则该方法返回 -1，除非被查找的字符串是一个空字符串，此时返回 str.length。
+//描述
+//字符串中的字符被从左向右索引。首字符的索引（index）为 0，字符串 stringName 的最后一个字符的索引是 stringName.length - 1。
+
+&quot;Blue Whale&quot;.indexOf(&quot;Blue&quot;); // returns  0
+&quot;Blue Whale&quot;.indexOf(&quot;Blute&quot;); // returns -1
+&quot;Blue Whale&quot;.indexOf(&quot;Whale&quot;, 0); // returns  5
+&quot;Blue Whale&quot;.indexOf(&quot;Whale&quot;, 5); // returns  5
+&quot;Blue Whale&quot;.indexOf(&quot;&quot;, 9); // returns  9
+&quot;Blue Whale&quot;.indexOf(&quot;&quot;, 10); // returns 10
+&quot;Blue Whale&quot;.indexOf(&quot;&quot;, 11); // returns 10
+</code></pre><h4 id="document-write-“字符串charAt-方法”"><a href="#document-write-“字符串charAt-方法”" class="headerlink" title="document.write(“字符串charAt()方法”);"></a>document.write(“字符串charAt()方法”);</h4><pre><code>//语法 str.charAt(index)  charAt() 方法返回字符串中指定位置的字符。
+var anyString = &quot;Brave new world&quot;;
+console.log(&quot;The character at index 0   is &apos;&quot; + anyString.charAt(0) + &quot;&apos;&quot;);
+console.log(&quot;The character at index 1   is &apos;&quot; + anyString.charAt(1) + &quot;&apos;&quot;);
+console.log(&quot;The character at index 2   is &apos;&quot; + anyString.charAt(2) + &quot;&apos;&quot;);
+console.log(&quot;The character at index 3   is &apos;&quot; + anyString.charAt(3) + &quot;&apos;&quot;);
+console.log(&quot;The character at index 4   is &apos;&quot; + anyString.charAt(4) + &quot;&apos;&quot;);
+console.log(&quot;The character at index 999 is &apos;&quot; + anyString.charAt(999) + &quot;&apos;&quot;);
+
+//    上面代码的输出为：
+//    The character at index 0 is &apos;B&apos;
+//    The character at index 1 is &apos;r&apos;
+//    The character at index 2 is &apos;a&apos;
+//    The character at index 3 is &apos;v&apos;
+//    The character at index 4 is &apos;e&apos;
+//    The character at index 999 is &apos;&apos;
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/字符串的常用方法/" rel="tag"># 字符串的常用方法</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/21/查询方法/" rel="next" title="BFC">
+                <i class="fa fa-chevron-left"></i> BFC
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Armyfront" />
+          <p class="site-author-name" itemprop="name">Armyfront</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Armyfront/Armyfront.github.io" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的常用方法"><span class="nav-number">1.</span> <span class="nav-text">字符串的常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串slice-截取方法”"><span class="nav-number">1.0.1.</span> <span class="nav-text">document.write(“字符串slice()截取方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串substr-方法”"><span class="nav-number">1.0.2.</span> <span class="nav-text">document.write(“字符串substr()方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串substring-方法”"><span class="nav-number">1.0.3.</span> <span class="nav-text">document.write(“字符串substring()方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串toUpperCase-方法”"><span class="nav-number">1.0.4.</span> <span class="nav-text">document.write(“字符串toUpperCase()方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串toLowerCase-方法”"><span class="nav-number">1.0.5.</span> <span class="nav-text">document.write(“字符串toLowerCase()方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串split-方法”"><span class="nav-number">1.0.6.</span> <span class="nav-text">document.write(“字符串split()方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串indexOf-方法”"><span class="nav-number">1.0.7.</span> <span class="nav-text">document.write(“字符串indexOf() 方法”);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write-“字符串charAt-方法”"><span class="nav-number">1.0.8.</span> <span class="nav-text">document.write(“字符串charAt()方法”);</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Armyfront</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

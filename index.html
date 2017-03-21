@@ -247,6 +247,276 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://armyfront.github.io/2017/03/21/字符串的常用方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armyfront">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小同学">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/21/字符串的常用方法/" itemprop="url">
+                  BFC
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-21T18:43:53+08:00">
+                2017-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="字符串的常用方法"><a href="#字符串的常用方法" class="headerlink" title="字符串的常用方法"></a>字符串的常用方法</h2><h4 id="document-write-“字符串slice-截取方法”"><a href="#document-write-“字符串slice-截取方法”" class="headerlink" title="document.write(“字符串slice()截取方法”);"></a>document.write(“字符串slice()截取方法”);</h4><pre><code>//字符串slice截取方法  MDN这样说  slice() 方法提取字符串中的一部分，并返回这个新的字符串。
+
+// 写法1
+var str = &apos;The morning is upon us.&apos;;
+str.slice(2, 5); // returns &apos;e m&apos; 表示从索引第2个字符开始，截取到索引为5的字符包含2，不包含5;【2，5);
+// 写法2
+var str1 = &apos;The morning is upon us.&apos;;
+var str2 = str1.slice(4, -1); //【4,-1) 表示从索引第4个字符开始，截取到最后一个字符 包含4，不包含-1;
+console.log(str2); // morning is upon us
+
+// 写法3
+var str3 = &apos;The morning is upon us.&apos;;
+str3.slice(-3); // returns &apos;us.&apos;  表示字符串从右往左数第三个字符截取到最后
+str3.slice(-3, -1); // returns &apos;us&apos;   表示字符串从右往左数第三个字符截取到最后一个字符 【-3,-1);
+str3.slice(0, -1); // returns &apos;The morning is upon us&apos; 【0，-1) 废话不多说，你们应该懂得
+
+// 写法4
+var str4 = &apos;The morning is upon us.&apos;;
+str4.slice(5, 2); //returns 空字符串
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/字符串的常用方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://armyfront.github.io/2017/03/21/查询方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Armyfront">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小同学">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/21/查询方法/" itemprop="url">
+                  BFC
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-21T18:43:51+08:00">
+                2017-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="find、findIndex、indexOf、lastIndex、includes-数组五种查询条件方法介绍"><a href="#find、findIndex、indexOf、lastIndex、includes-数组五种查询条件方法介绍" class="headerlink" title="find、findIndex、indexOf、lastIndex、includes 数组五种查询条件方法介绍"></a>find、findIndex、indexOf、lastIndex、includes 数组五种查询条件方法介绍</h2><h4 id="find-方法返回数组中满足提供的测试函数的第一个元素的值。"><a href="#find-方法返回数组中满足提供的测试函数的第一个元素的值。" class="headerlink" title="find() 方法返回数组中满足提供的测试函数的第一个元素的值。"></a>find() 方法返回数组中满足提供的测试函数的第一个元素的值。</h4><pre><code>语法： arr.find(callback[, thisArg])
+find()方法 查找数组中第一个大于等于15的元素
+
+var num = [10,3,5,15,100,1].find(function(elem, index){    
+    return elem&gt;=15;
+});
+console.log(num)     // 15
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/查询方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://armyfront.github.io/2017/03/03/js简单的归纳/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -323,7 +593,7 @@
 
       
         
-          <h1 id="js简单的归纳"><a href="#js简单的归纳" class="headerlink" title="js简单的归纳"></a>js简单的归纳</h1><hr>
+          <h2 id="js简单的归纳"><a href="#js简单的归纳" class="headerlink" title="js简单的归纳"></a>js简单的归纳</h2><hr>
 <p>基本类型</p>
 <pre><code>number,string,boolean,null,undefined
 </code></pre><p>组合类型</p>
@@ -555,7 +825,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -563,6 +833,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
